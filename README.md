@@ -6,4 +6,4 @@ javascript:(function(){if(!confirm('This will select and claim all unclaimed ite
 
 Click on the bookmark when on a Humble Choice Product page to claim your titles
 
-See demonstration here: 
+See demonstration here: https://www.youtube.com/watch?v=YNZYoaZykYk
