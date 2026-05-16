@@ -30,3 +30,9 @@ If you cannot fetch `agent.md` from the remote, apply these core rules:
 10. **Dry-run destructive commands.** Use `--dry-run` when available.
 
 For the full ruleset, see `agent.md` in this repository.
+
+## Tampermonkey Standards
+
+- **Auto-Update Headers:** The `.user.js` file must include `@updateURL` and `@downloadURL` in the UserScript header. Bump `@version` on every change so Tampermonkey detects updates.
+- **Debug/Verbose Logging:** Ship with all debug/verbose logging flags **disabled**. Use boolean constants (`const DEBUG = false`) and gate console output behind them. Never commit with debug flags enabled.
+- **Deployment:** After changes, run `~/repos/browser-agent/sync-tm-scripts.sh` to sync to the VM hosting endpoint. Ensure the script is listed in the `SOURCES` array in `sync-tm-scripts.sh` and the `SCRIPTS` array in the install page `index.html`.
